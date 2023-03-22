@@ -4,4 +4,4 @@ GlobeX has made a number of strategic acquisitions this year, but the IT infrast
 
 Our team has been assigned to assist with standardizing IT infrastructure for NET2GRID. 
 
-> NET2GRID is a young, innovative company that offers leading-edge AI and machine learning services in energy insights based on smart meter data whose vision of a world with sustainable energy aligns well with the mission of GlobeX
+> **NET2GRID** is a young, innovative company that offers leading-edge AI and machine learning services in energy insights based on smart meter data whose vision of a world with sustainable energy aligns well with the mission of GlobeX
