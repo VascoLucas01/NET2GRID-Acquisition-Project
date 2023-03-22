@@ -6,7 +6,7 @@ Sérgio: I will always be available to communicate. Work hours will be from 9AM 
 
 Vasco: I will always be available to communicate. Work hours will be from 7/8/9AM to 10PM.
 
-Diogo:
+Diogo: I will try to be available as best as I can due to work. Will be more available for work hours after 5PM but most of the week besides Wednesday will try to be available during the day as well.
 
 
 **- What platforms will you use to communicate (ie. Slack, phone …)?**
@@ -19,7 +19,7 @@ Sérgio: Sundays I tend not to spend a lot of time in front of the computer, unl
 
 Vasco: Thursday and Sunday from 8am - 10am.
 
-Diogo: 
+Diogo: Friday night
 
 
 **- What is your plan if you start to fall behind?**
@@ -28,7 +28,7 @@ Sérgio: Ask my colleagues for help, work locally outside work hours if needed.
 
 Vasco: Talk with my colleagues about what am I doing wrong and ask for help.
 
-Diogo:
+Diogo: Talk with my colleagues about my work, why I’m struggling and ask for help.
 
 
 **- How will you communicate after hours and on the weekend?**
@@ -37,7 +37,7 @@ Sérgio: I will always be available for a quick message and to help a colleague 
 
 Vasco: I will always be available.
 
-Diogo:
+Diogo: Will always be available through Slack, Whatsapp, SMS or calls.
 
 
 **- What is your strategy for ensuring everyone’s voice is heard?**
@@ -51,4 +51,4 @@ Sérgio: By having an open-door policy to all questions and problems, making sur
 
 Vasco: I will always ask for their opinion. We are a team, so we need to know everyone’s opinion to the benefit of the project.
 
-Diogo:
+Diogo: Will ask my team for their opinion, be open minded.
