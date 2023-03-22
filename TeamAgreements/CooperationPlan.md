@@ -6,7 +6,7 @@ Sérgio: Problem Solving, Critical Thinking, Good Communicator
 
 Vasco: Research, Persistent, Enthusiast
 
-Diogo:
+Diogo: Helpful, Research
 
 
 **- How can you best utilize these strengths in the execution of your project?**
@@ -15,7 +15,7 @@ Sérgio: Help my colleagues with any issues in any of their tasks, analyze my co
 
 Vasco: Always ask if they need help, give suggestions and welcome them too in order to allow a good flow of the project and team work.
 
-Diogo: 
+Diogo: Trying to help my colleagues as best as I can, be resourceful, provide any suggestions and report any problems that may arise.
 
 
 **- In which professional competencies do you each want to develop greater strength?**
@@ -24,7 +24,7 @@ Sérgio: Organization, Self Confidence
 
 Vasco: Self Confidence, keep calm
 
-Diogo:
+Diogo: Organization, Knowledge
 
 
 **- Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?**
