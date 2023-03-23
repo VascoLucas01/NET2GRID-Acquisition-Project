@@ -1,11 +1,10 @@
   # Script : WindowsServerConfig.ps1
-  # Purpose: Assigns a static IPv4 address to the machine and renames it based on user input. Checks if DNS Server, Management Tools and AD-DS areinstalled, if they are not installs them including all ManagementTools and Subfeatures.
+  # Purpose: Assigns a static IPv4 address to the machine and renames it based on user input. Checks if DNS Server, Management Tools and AD-DS are installed, if they are not installs them including all ManagementTools and Subfeatures.
   # Why    : It saves time.
   
 # Initialize the variables that contains the IP address, prefix, length, adapter, and default gateway to assign
 $ip = '192.168.2.10'
 $prefix = '24'
-$adapterindex = (Get-NetAdapter).InterfaceIndex[0] # Get the Interface Index of the network adapter
 $gateway = '192.168.2.1'
 Write-Output "What interface do you want to release the IP addresses?"
 
@@ -18,9 +17,9 @@ switch ($interface) {
     "1" {
             if (Get-NetAdapter -Name "Ethernet" -ErrorAction SilentlyContinue) {
                 Get-NetAdapter | Where-Object {$_.InterfaceAlias -eq "Ethernet"} | Remove-NetIPAddress
-                Get-NetRoute -InterfaceAlias ethernet -DestinationPrefix 0.0.0.0/0 | Remove-NetRoute
+                Get-NetRoute -InterfaceAlias Ethernet -DestinationPrefix 0.0.0.0/0 | Remove-NetRoute
                 # Configure the IP address on the adapter
-                New-NetIPAddress -IPAddress $ip -PrefixLength $prefix -InterfaceIndex $adapterindex -DefaultGateway $gateway
+                New-NetIPAddress -IPAddress $ip -PrefixLength $prefix -InterfaceAlias Ethernet -DefaultGateway $gateway
                 # Prompt the user for a new computer name and restart the computer with the new name
                 $newname = Read-Host -Prompt 'Please give a new name for this computer '
                 Rename-Computer -NewName $newname
@@ -33,7 +32,7 @@ switch ($interface) {
                 Get-NetAdapter | Where-Object {$_.InterfaceAlias -eq "Wireless"} | Remove-NetIPAddress
                 Get-NetRoute -InterfaceAlias Wireless -DestinationPrefix 0.0.0.0/0 | Remove-NetRoute
                 # Configure the IP address on the adapter
-                New-NetIPAddress -IPAddress $ip -PrefixLength $prefix -InterfaceIndex $adapterindex -DefaultGateway $gateway
+                New-NetIPAddress -IPAddress $ip -PrefixLength $prefix -InterfaceAlias Wireless -DefaultGateway $gateway
                 # Prompt the user for a new computer name and restart the computer with the new name
                 $newname = Read-Host -Prompt 'Please give a new name for this computer '
                 Rename-Computer -NewName $newname
