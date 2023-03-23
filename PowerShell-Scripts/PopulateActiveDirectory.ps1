@@ -70,8 +70,7 @@ foreach ($User in $ADUsersInfo){
 
    # if the organizational unit exists
    if( Get-ADOrganizationalUnit -Filter "Name -eq '$OU'" ){
-        Write-Warning "*****************  The Organizational Unit $OU
-exists *****************"
+        Write-Warning "*****************  The Organizational Unit $OU exists *****************"
    }
    # if the organizational unit not exists
    # Organizational Units' creation
