@@ -1,10 +1,14 @@
+# Script : ADForestConfig.ps1
+# Purpose: Add forest and promote Windows Server as a domain controller
+# Why    : It saves time.
+
+
 
 # Stores Admin password for Safe Mode starts
 $Password = Read-Host -Prompt   'Enter SafeMode Admin Password' -AsSecureString
 
 
 # Creates Forest and makes server Domain Controller
-
 $Net2grid = @{
 CreateDnsDelegation = $false
 DatabasePath = 'C:\Windows\NTDS'
@@ -23,5 +27,4 @@ Force = $true
 Install-ADDSForest @Net2grid
 
 # Restarts the server after completion
-
 Restart-Computer
