@@ -94,6 +94,7 @@ foreach ($User in $ADUsersInfo){
             -Name $fullName `
             -SamAccountName $username `
             -AccountPassword (ConvertTo-secureString $password -AsPlainText -Force) -ChangePasswordAtLogon $True `
+            -Enabled $True `
             -DisplayName $displayName `
             -Office $office `
             -EmailAddress $email `
