@@ -1,12 +1,12 @@
   # Script : WindowsServerConfig.ps1
-  # Purpose: Assigns a static IPv4 address to the machine and renames it based on user input. Checks if DNS Server, Management Tools and AD-DS are installed, if they are not installs them including all ManagementTools and Subfeatures.
+  # Purpose: Assigns a static IPv4 address to the machine and renames it based on user input. Checks if DNS Server, Management Tools, NPAS and AD-DS are installed, if they are not, installs them including all ManagementTools and Subfeatures.
   # Why    : It saves time.
   
 # Initialize the variables that contains the IP address, prefix, length, adapter, and default gateway to assign
 $ip = '192.168.2.10'
 $prefix = '24'
 $gateway = '192.168.2.1'
-Write-Output "What interface do you want to release the IP addresses?"
+Write-Output "What interface do you want to release the  IP addresses?"
 
 # Shows the user all the available adapters
 Get-NetAdapter
@@ -43,10 +43,12 @@ switch ($interface) {
     Default { Write-Host "You did not choose any of the options" }
 }
 
- # Check if DNS Server, ManagementTools, and AD-Domain-Services are installed
+ # Checks if DNS Server, NPAS, ManagementTools, and AD-Domain-Services are installed
  $dnsServer = Get-WindowsFeature DNS
  $mgmtTools = Get-WindowsFeature RSAT-AD-Tools
  $adds = Get-WindowsFeature AD-Domain-Services
+ $npas = Get-WindowsFeature NPAS
+ 
  # If DNS Server is not installed, install it
  if ($dnsServer.Installed -ne $true) {
   Write-Host "DNS Server is not installed. Installing..."
@@ -70,6 +72,14 @@ switch ($interface) {
   Write-Host "AD-Domain-Services is now installed"
  } else {
   Write-Warning "*********** AD-Domain-Services is already installed ***********"
+ }
+  # If NPAS is not installed, install it
+ if ($npas.Installed -ne $true) {
+  Write-Host "NPAS is not installed. Installing..."
+  Install-WindowsFeature -Name NPAS -IncludeAllSubFeature -IncludeManagementTools
+  Write-Host "NPAS is now installed"
+ } else {
+  Write-Warning "*********** NPAS is already installed ***********"
  }
  
  Restart-Computer
