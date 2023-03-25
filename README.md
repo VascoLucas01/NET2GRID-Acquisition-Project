@@ -1,6 +1,6 @@
 # NET2GRID-Acquisition-Project
 
-## Overview
+## Overview1
 
 GlobeX has made a number of strategic acquisitions this year, but the IT infrastruture of the new subsidiary companies is outdated. In order to maintain the levels of regulatory complaince required for federal contracts, GlobeX needs to update and reconfigure its subsidiary's IT infrastructure. For each acquisition, a task force has been assembled under the umbrella of the GlobeX special projects division to accomplish this project.
 
