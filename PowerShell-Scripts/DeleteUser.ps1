@@ -8,15 +8,13 @@
 # Prompt the user for the name of the user to delete
 $username = Read-Host "Enter the username to delete"
 
-# Prompt the user for the name of the Organizational Unit where the
-user is located
+# Prompt the user for the name of the Organizational Unit where the user is located
 $ouName = Read-Host "Enter the name of the Organizational Unit where
 the user is located"
 
 
 ### Attempt to retrieve the Organizational Unit object from Active Directory
-# if the Organizational Unit Name entered exits, for example
-'Marketing', $ou = OU=Marketing,DC=net2grid,DC=globexpower,DC=com
+# if the Organizational Unit Name entered exits, for example 'Marketing', $ou = OU=Marketing,DC=net2grid,DC=globexpower,DC=com
 $ou = Get-ADOrganizationalUnit -Filter "Name -eq '$ouName'" -ErrorAction SilentlyContinue
 
 
