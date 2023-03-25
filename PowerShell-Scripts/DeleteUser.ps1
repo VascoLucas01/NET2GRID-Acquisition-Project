@@ -1,7 +1,5 @@
 # Script : DeleteUser.ps1
-
 # Purpose: Deletes a specific user within a specific Organization Unit based on user prompt.
-
 # Why    : Easy and fast way for the Administrator to delete specific accounts.
 
 
