@@ -9,8 +9,7 @@
 $username = Read-Host "Enter the username to delete"
 
 # Prompt the user for the name of the Organizational Unit where the user is located
-$ouName = Read-Host "Enter the name of the Organizational Unit where
-the user is located"
+$ouName = Read-Host "Enter the name of the Organizational Unit where the user is located"
 
 
 ### Attempt to retrieve the Organizational Unit object from Active Directory
