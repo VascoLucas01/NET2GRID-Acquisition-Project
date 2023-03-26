@@ -6,13 +6,13 @@
 $ip           = '192.168.2.10'
 $prefix       = '24'
 $gateway      = '192.168.2.1'
-Write-Output  "What interface do you want to release the  IP addresses?"
+Write-Output  "What interface do you want to change?"`n
 
 # Shows the user all the available adapters
 Get-NetAdapter
 
 # Asks the user the interface to remove the IP addresses
-$interface = Read-Host "Enter (1 or 2) 1 - Ethernet, 2 - Wireless"
+$interface = Read-Host `n"Enter (1 or 2) 1 - Ethernet, 2 - Wireless"
 switch ($interface) {
     "1" {
             if (Get-NetAdapter -Name "Ethernet" -ErrorAction SilentlyContinue) {
