@@ -4,7 +4,7 @@
 
 
 # Prompt the user for the name of the user to delete
-$username = Read-Host "Enter the username to delete"
+$username = Read-Host "Enter the name to delete"
 
 # Prompt the user for the name of the Organizational Unit where the user is located
 $ouName = Read-Host "Enter the name of the Organizational Unit where the user is located"
