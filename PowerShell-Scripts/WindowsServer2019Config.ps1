@@ -1,4 +1,4 @@
-  # Script : WindowsServerConfig.ps1
+  # Script : WindowsServer2019Config.ps1
   # Purpose: Assigns a static IPv4 address to the machine and renames it based on user input. Checks if DNS Server, Management Tools, NPAS and AD-DS are installed, if they are not, installs them including all ManagementTools and Subfeatures.
   # Why    : It saves time.
   
