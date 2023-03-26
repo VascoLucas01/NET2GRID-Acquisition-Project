@@ -7,13 +7,12 @@
 # Powershell script that assigns a new IPv4 address to the machine as well as DNS.
 
 # Set the IP address, prefix length, adapter, and default gateway
-$ip = '192.168.2.20'
-$prefix = '24'
-$adapterindex = (Get-NetAdapter).InterfaceIndex # Get the Interface Index of the first network adapter
-$gateway = '192.168.2.1'
-$dns = '192.168.2.10'
+$ip           = '192.168.2.20'
+$prefix       = '24'
+$gateway      = '192.168.2.1'
+$dns          = '192.168.2.10'
 
-Write-Output "What interface do you want to release the IP addresses?"`n
+Write-Output "What interface do you want to change?"`n
 
 # Shows the user all the available adapters
 Get-NetAdapter
