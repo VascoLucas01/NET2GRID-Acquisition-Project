@@ -23,7 +23,7 @@ if ($ou) {
     try {
         $user = Get-ADUser -Identity $userDN -ErrorAction Stop
         Remove-ADObject -Identity $userDN -Recursive -Confirm:$false -ErrorAction SilentlyContinue
-        Write-Host "User $username has been deleted from $ouName"
+        Write-Host "User $name has been deleted from $ouName"
     }
     catch [Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException] {
         Write-Host "User $name was not found in $ouName"
