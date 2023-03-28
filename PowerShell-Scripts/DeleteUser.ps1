@@ -4,7 +4,7 @@
 
 
 # Prompt the user for the name of the user to delete
-$username = Read-Host "Enter the username to delete"
+$name = Read-Host "Enter the name to delete"
 
 # Prompt the user for the name of the Organizational Unit where the user is located
 $ouName = Read-Host "Enter the name of the Organizational Unit where the user is located"
@@ -18,7 +18,7 @@ $ou = Get-ADOrganizationalUnit -Filter "Name -eq '$ouName'" -ErrorAction Silentl
 # If the Organizational Unit object was found, check if the specified user exists in it and delete it if found
 if ($ou) {
 
-    $userDN = "CN=$username,$ou"
+    $userDN = "CN=$name,$ou"
 
     try {
         $user = Get-ADUser -Identity $userDN -ErrorAction Stop
@@ -26,7 +26,7 @@ if ($ou) {
         Write-Host "User $username has been deleted from $ouName"
     }
     catch [Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException] {
-        Write-Host "User $username was not found in $ouName"
+        Write-Host "User $name was not found in $ouName"
     }
 
 } else {
