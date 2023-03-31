@@ -6,7 +6,7 @@
 param (
 )
 
-Write-Verbose "Starting script readFromSpreadSheet.ps1 ..."
+Write-Verbose "Starting script PopulateActiveDirectoryStretchGoal.ps1 ..."
 
 $accessToken= "<YOUR_ACCESS_TOKEN>"
 $spreadsheetID = "<YOUR_SPREADSHEET_ID"
@@ -73,7 +73,7 @@ foreach ($row in $data) {
  
     # if the user not exists
     # user's creation
-
+    # if SamAccountName, FullName, Password or OU attributes are not filled in the spreadsheet no further action is taken
     if ([string]::IsNullOrEmpty($row.SamAccountName) -or [string]::IsNullOrEmpty($row.FullName) -or [string]::IsNullOrEmpty($row.Password) -or [string]::IsNullOrEmpty($row.OU)) {
         Write-Warning "User not added. SamAccountName, FullName, Password or OU attributes are possible empty."
     }
@@ -138,4 +138,4 @@ foreach ($row in $data) {
 
 
 
-Write-Verbose "Ending script readFromSpreadSheet.ps1 ..."
+Write-Verbose "Ending script PopulateActiveDirectoryStretchGoal.ps1 ..."
