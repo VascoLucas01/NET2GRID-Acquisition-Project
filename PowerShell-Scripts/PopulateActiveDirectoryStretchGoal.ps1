@@ -79,15 +79,15 @@ foreach ($row in $data) {
         Write-Warning "*****************  The user $username exists *****************"
     }
     
-    # if the user not exists
-    # user's creation   
+    # if the user not exists and every attribute mentioned above are filled correctly   
     else {
 
         # if the organizational unit exists
         if( Get-ADOrganizationalUnit -Filter "Name -eq '$OU'" ){
              Write-Warning "*****************  The Organizational Unit $OU exists *****************"
         }
-        # if the organizational unit not exists
+       
+       # if the organizational unit not exists
         # Organizational Units' creation
         else{
              New-ADOrganizationalUnit -Name $OU -Path “DC=net2grid,DC=globexpower,DC=com” -Description “NET2GRID”
@@ -123,9 +123,12 @@ foreach ($row in $data) {
 
         $userCreated = New-ADUser @params -PassThru
         
+        # if the user is created successfully
         if( $userCreated ){
             Write-Host "The user account $username was created." -ForegroundColor yellow
-        } 
+        }
+        
+        # if the user's creation went wrong
         else {
             Write-Warning "*****************  Something happen. The user was not created.  *****************"
         } 
