@@ -1,4 +1,6 @@
-
+# Script : UploadCSVFileToGoogleSpreadSheet.ps1
+# Purpose: Upload the CSV file to Google SpreadSheet
+# Why    : It was necessary. NET2GRID already had a CSV file with user's information. In order to automate the process it was decided to developed this script.
 
 Import-Module UMN-Google
 
