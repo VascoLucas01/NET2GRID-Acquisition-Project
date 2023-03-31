@@ -1,6 +1,7 @@
 # Script : PopulateActiveDirectoryStretchGoal.ps1
 # Purpose: Through a token and a spreadsheetID it is possible to access a google spreadsheet to retrieve users' information
 # Why    : Stretch goal of the AddUserOU_AD.ps1 script
+Import-Module UMN-Google
  
  [CmdletBinding()]
 param (
