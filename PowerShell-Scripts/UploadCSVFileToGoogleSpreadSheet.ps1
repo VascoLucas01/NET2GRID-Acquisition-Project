@@ -1,5 +1,6 @@
 
 
+Import-Module UMN-Google
 
 $spreadsheetID = "<YOUR_SPREADSHEET_ID"
 
