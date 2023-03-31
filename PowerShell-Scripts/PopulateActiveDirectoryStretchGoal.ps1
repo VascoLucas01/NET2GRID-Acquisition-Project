@@ -69,7 +69,7 @@ foreach ($row in $data) {
     Write-Verbose "--------------------------------------------------------------------------------"
 
 
-    # if the user exists 
+    
  
     # if the user not exists
     # user's creation
@@ -77,7 +77,7 @@ foreach ($row in $data) {
     if ([string]::IsNullOrEmpty($row.SamAccountName) -or [string]::IsNullOrEmpty($row.FullName) -or [string]::IsNullOrEmpty($row.Password) -or [string]::IsNullOrEmpty($row.OU)) {
         Write-Warning "User not added. SamAccountName, FullName, Password or OU attributes are possible empty."
     }
-        
+    # if the user exists 
     elseif ( Get-ADUser -Filter { SamAccountName -eq $username } ){
         Write-Warning "*****************  The user $username exists *****************"
     }
