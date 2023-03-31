@@ -1,3 +1,7 @@
+# Script : GettingAuthorizationToken.ps1
+# Purpose: This script gets the token to access the google cloud resources
+# Why    : The objetive is that the users in DC can access this online spreadsheet to populate the users
+
 Import-Module UMN-Google
 
 # Set security protocol to TLS 1.2 to avoid TLS errors
