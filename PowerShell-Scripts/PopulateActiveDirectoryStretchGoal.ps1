@@ -80,7 +80,7 @@ foreach ($row in $data) {
         Write-Warning "*****************  The user $username exists *****************"
     }
     
-    # if the user not exists and every attribute mentioned above are filled correctly   
+    # if the user doesn't exist and every attribute mentioned above is filled correctly   
     else {
 
         # if the organizational unit exists
@@ -88,7 +88,7 @@ foreach ($row in $data) {
              Write-Warning "*****************  The Organizational Unit $OU exists *****************"
         }
        
-       # if the organizational unit not exists
+       # if the organizational unit doesn't exist
         # Organizational Units' creation
         else{
              New-ADOrganizationalUnit -Name $OU -Path “DC=net2grid,DC=globexpower,DC=com” -Description “NET2GRID”
@@ -131,7 +131,7 @@ foreach ($row in $data) {
         
         # if the user's creation went wrong
         else {
-            Write-Warning "*****************  Something happen. The user was not created.  *****************"
+            Write-Warning "*****************  Something happened. The user was not created.  *****************"
         } 
 
     }
