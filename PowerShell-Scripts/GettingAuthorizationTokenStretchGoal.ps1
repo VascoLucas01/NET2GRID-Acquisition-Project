@@ -12,6 +12,7 @@ $scope = "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.co
 $certPath = "<YOUR_PATH_TO_YOUR_CERTIFICATE_FILE>"
 $iss = "<YOUR_SERVICE_ACCOUNTs_EMAIL_ADDRESS>"
 $certPswd = "<YOUR_PRIVATE_KEY_PASSWORD>"
+
 try {
     $accessToken = Get-GOAuthTokenService -scope $scope -certPath $certPath -certPswd $certPswd -iss $iss
 } catch {
