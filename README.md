@@ -18,7 +18,7 @@ Our team has been assigned to assist with standardizing IT infrastructure for NE
 
 ## Deliverables:
 
-- [Project Report](https://drive.google.com/file/d/1bkUoN6Q8AstrITjqF8jbomOeCyvjCY_Q/view?usp=sharing)
+- [Project Report](https://docs.google.com/document/d/1LVdf26LdLZnB-fZagjDq3Wg6pXyTAYAoN_cwlorv7js/edit?usp=sharing)
 - [Demo Day Slide Deck](https://docs.google.com/presentation/d/1F9Z8U2cAYGBJmb0pe4S_9PCLfIl9UBfbSSGNZwOJh0M/edit?usp=sharing)
 - [Project Plan](https://drive.google.com/file/d/18Ra2zM6jh8l0wYACE7_1jD4WnpwyQO0r/view?usp=share_link)
 - [Team Agreements](https://github.com/VascoLucas01/NET2GRID-Acquisition-Project/blob/main/TeamAgreements/TeamAgreements.md)
