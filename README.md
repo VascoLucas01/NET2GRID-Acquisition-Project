@@ -27,7 +27,7 @@ Our team has been assigned to assist with standardizing IT infrastructure for NE
 
 - Windows Server 2019 Standard - Version 1809
 - Windows 10 Pro 22H2 - Build 190452728
-- pfSense - Version 2.6.-RELEASE (amd64)
+- pfSense - Version 2.6.0-RELEASE (amd64)
 
 ## Team Contributors:
 
